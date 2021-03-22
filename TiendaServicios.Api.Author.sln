@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaServicios.Api.Author", "TiendaServicios.Api.Author\TiendaServicios.Api.Author.csproj", "{474CD72E-411C-42B8-A917-E4612335A742}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TiendaServicios.Api.Author", "TiendaServicios.Api.Author\TiendaServicios.Api.Author.csproj", "{474CD72E-411C-42B8-A917-E4612335A742}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaServicios.Api.Libro", "TiendaServicios.Api.Libro\TiendaServicios.Api.Libro.csproj", "{A7395530-8F5A-4C52-ABE2-AAF225C8BB68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{474CD72E-411C-42B8-A917-E4612335A742}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{474CD72E-411C-42B8-A917-E4612335A742}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{474CD72E-411C-42B8-A917-E4612335A742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7395530-8F5A-4C52-ABE2-AAF225C8BB68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7395530-8F5A-4C52-ABE2-AAF225C8BB68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7395530-8F5A-4C52-ABE2-AAF225C8BB68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7395530-8F5A-4C52-ABE2-AAF225C8BB68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

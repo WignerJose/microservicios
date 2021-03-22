@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,10 +21,20 @@ namespace TiendaServicios.Api.Author.Aplicacion
             public DateTime? FehcaNacimiento { get; set; }
         }
 
+        public class EjecutaValidation :AbstractValidator<Ejecuta>
+        {
+             public EjecutaValidation()
+            {
+                RuleFor(validation => validation.Nombre).NotEmpty().Length(10,20);
+
+                RuleFor(validation => validation.Apellido).NotEmpty();
+            }
+            
+        }
 
         public class Manejador : IRequestHandler<Ejecuta>
         {
-            public readonly ContextoAutor _contexto;
+            private readonly ContextoAutor _contexto;
 
             public Manejador(ContextoAutor contexto)
             {

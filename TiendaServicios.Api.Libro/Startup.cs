@@ -13,10 +13,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TiendaServicios.Api.Author.Aplicacion;
-using TiendaServicios.Api.Author.Persistencia;
+using TiendaServicios.Api.Libro.Aplicacion;
+using TiendaServicios.Api.Libro.Persistencia;
 
-namespace TiendaServicios.Api.Author
+namespace TiendaServicios.Api.Libro
 {
     public class Startup
     {
@@ -32,13 +32,14 @@ namespace TiendaServicios.Api.Author
         {
             services.AddControllers().AddFluentValidation(cfg=> cfg.RegisterValidatorsFromAssemblyContaining<Nuevo>());
 
-            services.AddDbContext<ContextoAutor>(opt =>
+            services.AddDbContext<ContextoLibreria>(opt =>
             {
-                opt.UseNpgsql(Configuration.GetConnectionString("ConexionDB"));
+                opt.UseSqlServer(Configuration.GetConnectionString("ConexionDB"));
             });
 
-            services.AddMediatR(typeof(Nuevo.Manejador).Assembly);
-            services.AddAutoMapper(typeof(Consulta.Manejador));
+            services.AddMediatR(typeof(Nuevo.Handler).Assembly);
+            services.AddAutoMapper(typeof(Consulta.Ejecuta));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
