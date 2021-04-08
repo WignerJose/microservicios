@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:33606",
+      "applicationUrl": "http://localhost:57822",
       "sslPort": 0
     }
   },
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "TiendaServicios.Api.Libro": {
+    "TiendaServicios.Api.Geteway": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",

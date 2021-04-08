@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TiendaServicios.Api.Libro.Migrations
 {
-    public partial class MigrationsSQLSERVERinicial : Migration
+    public partial class TheFirstMigrations : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,7 +14,7 @@ namespace TiendaServicios.Api.Libro.Migrations
                     LibreriaMaterialId = table.Column<Guid>(nullable: false),
                     Titulo = table.Column<string>(nullable: true),
                     FechaPublicacion = table.Column<DateTime>(nullable: true),
-                    AutorLibro = table.Column<Guid>(nullable: false)
+                    AutorLibro = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
                 {

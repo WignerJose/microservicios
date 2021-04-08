@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  tiendaservicios.api.author:
+    image: ${DOCKER_REGISTRY-}tiendaserviciosapiauthor
+    build:
+      context: .
+      dockerfile: TiendaServicios.Api.Author/Dockerfile
+  tiendaservicios.api.libro:
+    image: ${DOCKER_REGISTRY-}tiendaserviciosapilibro
+    build:
+      context: .
+      dockerfile: TiendaServicios.Api.Libro/Dockerfile
+
+  tiendaservicios.api.carritocompra:
+    image: ${DOCKER_REGISTRY-}tiendaserviciosapicarritocompra
+    build:
+      context: .
+      dockerfile: TiendaServicios.Api.CarritoCompra/Dockerfile
+
+  tiendaservicios.api.geteway:
+    image: ${DOCKER_REGISTRY-}tiendaserviciosapigeteway
+    build:
+      context: .
+      dockerfile: TiendaServicios.Api.Geteway/Dockerfile
+
+networks:
+  default:
+    external:
+      name: microservicienet 
+
+
+

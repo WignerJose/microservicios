@@ -43,6 +43,9 @@ namespace TiendaServicios.Api.Author.Controllers
             return await _mediator.Send(new Filter.filter { AutorGuid=id});
         }
 
+     
+
+
 
 
 

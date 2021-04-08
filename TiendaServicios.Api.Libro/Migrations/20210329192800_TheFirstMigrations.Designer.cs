@@ -10,8 +10,8 @@ using TiendaServicios.Api.Libro.Persistencia;
 namespace TiendaServicios.Api.Libro.Migrations
 {
     [DbContext(typeof(ContextoLibreria))]
-    [Migration("20210322145536_MigrationsSQLSERVERinicial")]
-    partial class MigrationsSQLSERVERinicial
+    [Migration("20210329192800_TheFirstMigrations")]
+    partial class TheFirstMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,7 +27,7 @@ namespace TiendaServicios.Api.Libro.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("AutorLibro")
+                    b.Property<Guid?>("AutorLibro")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("FechaPublicacion")
